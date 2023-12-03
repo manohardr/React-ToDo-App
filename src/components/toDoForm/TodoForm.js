@@ -3,7 +3,8 @@ import "./TodoForm.css"; // Import the CSS file
 
 const TodoForm = ({ addTask }) => {
   const [task, setTask] = useState("");
-
+  
+// Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     if (task.trim()) {

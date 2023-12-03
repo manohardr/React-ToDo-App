@@ -5,6 +5,7 @@ import TodoList from './components/TodoList';
 const App = () => {
   const [tasks, setTasks] = useState([]);
 
+// Function to add a new task
   const addTask = (content) => {
     const newTask = {
       id: Date.now(),
@@ -13,11 +14,11 @@ const App = () => {
     };
     setTasks([...tasks, newTask]);
   };
-
+// Function to delete a task
   const deleteTask = (taskId) => {
     setTasks(tasks.filter((task) => task.id !== taskId));
   };
-
+ // Function to toggle task completion
   const toggleComplete = (taskId) => {
     setTasks(
       tasks.map((task) =>

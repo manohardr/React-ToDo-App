@@ -3,7 +3,8 @@ import TodoItem from './toDoItem/TodoItem';
 
 const TodoList = ({ tasks, deleteTask, toggleComplete }) => {
   const [filter, setFilter] = useState('all');
-
+  
+// Filter tasks based on the selected filter value
   const filteredTasks = tasks.filter((task) => {
     if (filter === 'completed') {
       return task.completed;
