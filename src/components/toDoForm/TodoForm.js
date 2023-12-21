@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./TodoForm.css"; // Import the CSS file
-
-const TodoForm = ({ addTask }) => {
+import { useContext } from "react";
+import { TodoItemsContext } from "../../store/TodoItemsContext";
+const TodoForm = () => {
   const [task, setTask] = useState("");
   
+  const {addTask} = useContext(TodoItemsContext);
 // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -1,9 +1,12 @@
 import React from 'react';
 import './TodoItem.css'; // Import the CSS file
-
-const TodoItem = ({ task, deleteTask, toggleComplete }) => {
+import { useContext } from 'react';
+import { TodoItemsContext } from '../../store/TodoItemsContext';
+const TodoItem = ({ task }) => {
   const { id, content, completed } = task;
 
+  const {deleteTask, toggleComplete} = useContext(TodoItemsContext);
+ 
   return (
     <li>
       <input
